@@ -20,7 +20,7 @@ def main():
     print("Low-rate background requests started; Ctrl+C to stop.", flush=True)
     while True:
         if not args.once:
-            time.sleep(rng.uniform(10, 30))
+            time.sleep(rng.uniform(0.5, 3.0))
         available = [host for host in HOSTS
                      if cooldown.get(host, 0) <= time.monotonic()]
         if not available:
